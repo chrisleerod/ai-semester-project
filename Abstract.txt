@@ -1,0 +1,13 @@
+We intend to use computer vision to read American Sign Language finger spellings and transcribe what is signed into
+text. This problem was found when one of our group members observed a real-life limitation of a deaf person trying to
+communicate with a blind person. One could use sign language but not speak while the other could hear, and read through
+the use of text to speech. This problem is significant because it removes a language barrier that would otherwise
+prevent visually impaired and hard of hearing people from communicating with each other. By allowing a hard of hearing
+person to sign naturally, they can communicate at their regular tempo with a visually impaired person as they listen
+to the output of their own pace.
+
+One algorithm that we plan on utilizing is the Alpha-Beta pruning algorithm. This will help us cut down on the amount of
+searching required to find the correct letter to hand translation. We also plan on making use of gradient descent to
+help with the identification of letter signs. For the identification of words from the signed letters, we intend to use
+a linear search algorithm to begin. For algorithmic improvements, we intend to improve the linear search algorithm by
+expanding it into an Aho-Corasick algorithm if it proves to be meaningfully more efficient.
