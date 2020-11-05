@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import onnxruntime as ort
-import manipulate
+import manipulate, record
 
 
 def center_crop(frame):
@@ -38,9 +38,12 @@ def main():
         index = np.argmax(y, axis=1)
         letter = index_to_letter[int(index)]
         manipulate.letter1store(letter)
-        checker = manipulate.letter1check()
-        if letter != checker:
-            letter = None
+        manipulate.letter2check(letter)
+        held = manipulate.isheld()
+        towrite = None
+        if held:
+            towrite = letter
+            record.writedown(letter)
 
         cv2.putText(frame, letter, (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 2.0, (0, 255, 0), thickness=2)
         cv2.imshow("Sign Language Translator", frame)
