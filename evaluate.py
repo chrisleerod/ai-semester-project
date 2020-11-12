@@ -9,8 +9,8 @@ import numpy as np
 import onnx
 import onnxruntime as ort
 
-from dataset import get_train_test_loaders
-from train import Net
+from step_2_dataset import get_train_test_loaders
+from step_3_train import Net
 
 
 def evaluate(outputs: Variable, labels: Variable) -> float:
